@@ -9,7 +9,7 @@ function Blog() {
                 <CardLink to='/'>
                     <CardImg alt='bubbles' src='https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/06/floating-translucent-soap-bubbles.jpg' />
                     <CardDate>25/12/2022 * OR Sasson</CardDate>
-                    <CardTitle>A new bank is coming</CardTitle>
+                    <CardTitle>A new blog is coming</CardTitle>
                     <CardContent>
                         It's been more than 5 years since Shalom Raanan, Arthur and I began our journey
                         and formed hse, and finally,w...

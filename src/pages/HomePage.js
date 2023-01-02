@@ -1,7 +1,5 @@
 import React from 'react'
-import Navbar from '../components/navbar/Navbar'
 import bVideo from '../assets/video/pexels-cottonbro-9695191.mp4'
-import Sidebar from '../components/sidebar/Sidebar'
 import Main from '../components/main/Main'
 function HomePage() {
     const width = window.screen.width

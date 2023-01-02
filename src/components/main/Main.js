@@ -5,11 +5,11 @@ const Main = () => {
     return (
         <MainContainer>
             <MainTitle>
-                hse.
+                Sassi.
             </MainTitle>
             <MainDownContainer>
                 <MainButtonsTitle>
-                    A new bank is coming
+                    A new blog is coming
                 </MainButtonsTitle>
                 <MainButton>
                     Read Latest Updates

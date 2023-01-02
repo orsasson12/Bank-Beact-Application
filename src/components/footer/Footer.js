@@ -9,7 +9,7 @@ function Footer() {
                 Accessibility Statement
             </MainLink>
             <MainFotterContent>
-                hse is a registered trademark of esh Org Ltd.
+                blogi is a registered trademark of blog Org Ltd.
             </MainFotterContent>
         </MainFooter>
     )
