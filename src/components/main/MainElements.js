@@ -21,6 +21,9 @@ font-size: 10em;
 color: #fff;
 text-shadow: 0 5px 10px rgba(0,0,0,1);
 mix-blend-mode: overlay;
+@media screen and (max-width:768px) {
+    font-size: 5rem;
+}
 `
 
 
