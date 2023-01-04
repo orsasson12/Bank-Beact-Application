@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Link, Link as LinkR } from 'react-router-dom'
+import {  Link as LinkR } from 'react-router-dom'
 
 export const SidebarC = styled.aside`
 display: ${({ isOpen }) => (isOpen ? 'flex' : 'none' )};
@@ -16,7 +16,15 @@ transition: 1s ease-in;
 export const SidebarListContainer = styled.div`
    position: absolute;
    top: 5%;
-   left: 4%;
+   left: ${({memoLang}) => memoLang === 'en'? '4%' : null};
+   right: ${({memoLang}) => memoLang === 'he'? '25%' : null};
+
+    @media screen and (max-width:425px) {
+          right: ${({ memoLang }) => memoLang === 'he' ? '33%' : null};
+    }
+    @media screen and (max-width:390px) {
+          right: ${({ memoLang }) => memoLang === 'he' ? '45%' : null};
+    }
 `
 
 export const SidebarList = styled.ul`
@@ -36,6 +44,8 @@ export const SidebarListItem = styled(LinkR)`
     text-decoration: none;
     font-size: 1.2rem;
     border-radius: 5px;
+    width: max-content;
+    align-self: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     &:hover{
         background-color: gray;

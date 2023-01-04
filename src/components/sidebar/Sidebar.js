@@ -1,19 +1,18 @@
-import React from 'react'
-import { SidebarC, SidebarListItem, SidebarList, SidebarListContainer } from './SidebarElements'
+import React, { useContext } from 'react'
+import { LanguageContext } from '../../store/LanguageContext'
+import { SidebarC, SidebarListItem, SidebarList, SidebarListContainer } from './SidebarStyles'
+import { en, he } from '../../data/languageData'
 const Sidebar = ({ isOpen, toggle }) => {
+    const { memoLang } = useContext(LanguageContext)
     return (
         <SidebarC isOpen={isOpen}>
-            <SidebarListContainer>
+            <SidebarListContainer memoLang={memoLang}>
                 <SidebarList>
-                    <SidebarListItem to='/' onClick={toggle}>
-                       Home
-                    </SidebarListItem>
-                    <SidebarListItem to='/blog' onClick={toggle}>
-                       Blog
-                    </SidebarListItem>
-                    <SidebarListItem to='/' onClick={toggle}>
-                        Careers
-                    </SidebarListItem>
+                    {memoLang === 'en' ? en.navItems.map((item) => {
+                        return <SidebarListItem to={item === 'Home' ? '/' : item}>{item}</SidebarListItem>
+                    }) : he.navItems.map((item) => {
+                        return <SidebarListItem to={item === 'ראשי' ? '/' : item}>{item}</SidebarListItem>
+                    })}
                 </SidebarList>
             </SidebarListContainer>
         </SidebarC>

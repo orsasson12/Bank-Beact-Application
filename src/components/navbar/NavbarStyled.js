@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { Link as LinkR } from 'react-router-dom'
-import { Link as LinkS } from 'react-scroll'
 import { FaBars } from 'react-icons/fa'
 export const Nav = styled.nav`
 background-color: ${({ location }) => (location.pathname !== '/' ? '#2E2F38' : 'transparent')};
 height: 80px;
+direction: ${({memoLang}) => memoLang === 'en' ? 'ltr' : 'rtl'};
 display: flex;
 padding: 0.5rem calc((80vw - 1000px) / 2);
 z-index: 10;
@@ -49,7 +49,7 @@ export const Bars = styled(FaBars)`
     
     @media screen and (max-width:868px) {
         display: block;
-        position: absolute;
+        position:  ${({ memoLang }) => memoLang === 'en' ? 'absolute' : 'none'};
         color: white;
         top: 15px;
         left: 3rem;
@@ -109,9 +109,9 @@ export const DropDownContent = styled.div`
 export const NavDropDown = styled.div`
       position: relative;
       display: inline-block;
-    
+
       &:hover ${DropDownContent}{
-           display: flex;
+             display: flex;
             justify-content: center;
       }
   `
@@ -126,7 +126,9 @@ export const DropDown = styled(LinkR)`
 export const LangDrop = styled.div`
 position: absolute;
    top: 40%;
-   right: 50%;
+   /* right: 50%; */
+   right: ${({ memoLang }) => memoLang === 'en' ? '50%' : 'none'};
+   left: ${({ memoLang }) => memoLang === 'he' ? '50%' : 'none'};
 `
 
 export const LangList = styled.ul`
@@ -138,7 +140,7 @@ export const LangList = styled.ul`
     background-color: #FFFFFF;
 `
 
-export const LangItem = styled(LinkR)`
+export const LangItem = styled.li`
    display: inline-block;
     padding: 0.5rem 0.8rem;
     color:rgb(51, 51, 51);

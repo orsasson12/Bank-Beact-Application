@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { Link as LinkR } from 'react-router-dom'
 export const MainFooter = styled.div`
     display: flex;
+    direction: ${({ memoLang }) => memoLang === 'en' ? 'ltr' : 'rtl'};
     flex-direction: column;
     border-top: 1px solid;
     width: 500px;

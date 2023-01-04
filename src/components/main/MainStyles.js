@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { Link as LinkR } from 'react-router-dom'
+
 
 
 export const MainContainer = styled.main`
